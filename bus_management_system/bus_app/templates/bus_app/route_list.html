@@ -1,0 +1,29 @@
+{% extends "bus_app/base.html" %}
+
+{% block content %}
+<h1>Route List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Route ID</th>
+            <th>Destination</th>
+            <th>Distance</th>
+            <th>Type of Service</th>
+            <th>Duration</th>
+            <th>Refreshment Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for route in routes %}
+        <tr>
+            <td>{{ route.route_id }}</td>
+            <td>{{ route.destination }}</td>
+            <td>{{ route.distance }}</td>
+            <td>{{ route.type_of_service }}</td>
+            <td>{{ route.duration.duration }}</td>
+            <td>{{ route.duration.refreshment_time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

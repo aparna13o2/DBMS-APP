@@ -1,0 +1,27 @@
+{% extends "bus_app/base.html" %}
+
+{% block content %}
+<h1>Bus List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Bonnet No</th>
+            <th>Registration No</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for bus in buses %}
+        <tr>
+            <td>{{ bus.bonnet_no }}</td>
+            <td>{{ bus.registration_no }}</td>
+            <td>{{ bus.capacity }}</td>
+            <td>{{ bus.status }}</td>
+            <td>{{ bus.bus_type }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

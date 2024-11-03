@@ -1,0 +1,27 @@
+{% extends "bus_app/base.html" %}
+
+{% block content %}
+<h1>Depot List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Depot ID</th>
+            <th>Capacity</th>
+            <th>Place</th>
+            <th>Pincode</th>
+            <th>District</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for depot in depots %}
+        <tr>
+            <td>{{ depot.depot_id }}</td>
+            <td>{{ depot.capacity }}</td>
+            <td>{{ depot.depot2.place }}</td>
+            <td>{{ depot.depot2.pincode }}</td>
+            <td>{{ depot.depot2.district }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
