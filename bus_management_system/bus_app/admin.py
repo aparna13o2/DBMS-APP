@@ -1,0 +1,22 @@
+from django.contrib import admin
+from .models import *
+admin.site.register(Employee1)
+admin.site.register(Employee21)
+
+admin.site.register(E221)
+admin.site.register(E222)
+admin.site.register(Depot1)
+admin.site.register(Depot2)
+admin.site.register(Route12)
+admin.site.register(Route11)
+admin.site.register(Route2)
+admin.site.register(Bus)
+admin.site.register(Passenger)
+admin.site.register(Ticket1)
+admin.site.register(Ticket2)
+admin.site.register(WorksFor)
+admin.site.register(WorksIn)
+admin.site.register(TravelsIn)
+admin.site.register(GoesThrough)
+admin.site.register(StartsFrom1)
+admin.site.register(StartsFrom2)
