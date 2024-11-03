@@ -1,0 +1,118 @@
+
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(file:///C:/Users/kovap/bus_management_system/bus_app/static/bus.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    transition: color 0.4s ease;
+}
+.navbar ul li a:hover{
+    color: #ff5733;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #ff5733;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.4s ease;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    font-size: 60px;
+    margin-top: 80px;
+    color: #ff5733;
+    letter-spacing: 2px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 300;
+    line-height: 30px;
+    max-width: 600px;
+}
+.know{
+    display:inline-block;
+    text-decoration: none;
+    color: #ff5733;
+    border: 2px solid #ff5733;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+.know:hover{
+    background: #ff5733;
+    color: #fff;
+}
+.table {
+    width: 85%; /* Adjust the width as needed */
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 15px; /* Adjust padding for size */
+    border: 1px solid #ddd;
+    text-align: left;
+    color: #333; /* Change this to your desired text color */
+}
+
+.table th {
+    background-color: #4CAF50; /* Header background color */
+    color: white; /* Header text color */
+}
+
+.table td {
+    background-color: #f9f9f9; /* Cell background color */
+    color: #333; /* Cell text color */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Alternating row color */
+}
+
