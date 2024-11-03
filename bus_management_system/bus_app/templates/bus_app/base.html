@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Management</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="{% static 'buslogo1.png' %}" class="logo">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'employee_list' %}">Employee</a></li>
+                <li><a href="{% url 'depot_list' %}">Depot</a></li>
+                <li><a href="{% url 'bus_list' %}">Bus</a></li>
+                <li><a href="{% url 'route_list' %}">Route</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                
+
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
+
